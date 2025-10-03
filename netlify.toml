@@ -1,0 +1,13 @@
+[build]
+  # Command to build your Next.js project
+  command = "npm run build"
+  
+  # Folder to publish (Next.js output folder)
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"   # Match your local Node.js version
+  NEXT_TELEMETRY_DISABLED = "1" # Disable telemetry on build
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
