@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Gemini Chat 🪐💬
 
-## Getting Started
+Gemini Chat is a modern, real-time chat application built with React, Vite, and Tailwind CSS. It enables users to communicate seamlessly with multiple chat rooms or direct messages. The app is responsive, fast, and designed for a smooth user experience.
 
-First, run the development server:
+Live Demo: [https://geminii-clone-kuvaka.netlify.app/]
 
-```bash
+Project Overview 🌟
+
+Real-time messaging with multiple chat rooms or direct messages.
+
+Responsive design for desktop and mobile devices.
+
+Clean and intuitive interface for effortless navigation.
+
+Implements features like throttling, pagination, infinite scroll, and form validation for better performance and user experience.
+
+Setup and Run Instructions 💻
+Clone the repository
+git clone https://github.com/Kartikmanth19/Gemini-Clone.git
+cd gemini-chat
+
+Install dependencies
+npm install
+# or
+yarn install
+# or
+pnpm install
+
+Start the development server
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open http://localhost:5173
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+ to see the app in action. The app auto-refreshes as you edit files.
 
-To learn more about Next.js, take a look at the following resources:
+Folder/Component Structure 🗂️
+gemini-chat/
+├─ public/                 # Static assets like images, favicon
+├─ src/
+│  ├─ components/          # Reusable React components
+│  │  ├─ ChatBox/          # Main chat window
+│  │  ├─ MessageList/      # Displays messages with pagination/infinite scroll
+│  │  ├─ MessageInput/     # Form for sending messages
+│  │  └─ Header/           # App header/navbar
+│  ├─ pages/               # App pages (if routing implemented)
+│  ├─ context/             # React Context API or state management
+│  ├─ utils/               # Utility functions (throttling, validation, etc.)
+│  ├─ hooks/               # Custom hooks
+│  └─ styles/              # Tailwind CSS configurations and custom styles
+├─ package.json
+└─ README.md
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Explanation:
 
-## Deploy on Vercel
+components/: Reusable UI pieces for modularity.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+context/: State management for user sessions and chat data.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+utils/: Contains helper functions for throttling, validation, and pagination.
+
+hooks/: Custom hooks to handle API calls, infinite scrolling, or other logic.
+
+Features Implementation 🔧
+Throttling ⚡
+
+Ensures input events (like typing) or API calls are limited to prevent performance issues.
+
+Implemented using lodash.throttle or custom throttle functions in utils/.
+
+Pagination 📄
+
+Messages are loaded in batches instead of all at once to improve performance.
+
+Allows users to navigate between pages or load older messages dynamically.
+
+Infinite Scroll ⬇️
+
+Automatically loads more messages as the user scrolls up in the chat window.
+
+Implemented with scroll event listeners and a combination of throttling to prevent excessive API calls.
+
+Form Validation ✅
+
+Ensures messages and input fields meet required criteria before submission.
+
+Implemented with React state and utility functions in utils/validation.js.
+
+Deployment 🌐
+
+I have deploy Gemini Chat on platforms like:
+
+Netlify Live Link :- https://geminii-clone-kuvaka.netlify.app/
